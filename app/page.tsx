@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ThemeToggle from "./theme-toggle";
 
 export const metadata: Metadata = {
-  title: "Amos Roche — ML Engineer / Researcher",
+  title: "Amos Roche — ML Engineer and Researcher",
   description:
-    "Amos Roche is an AI engineer working across model development, applied research, and production machine learning systems.",
+    "Amos Roche is an ML engineer and researcher working across model development, applied research, and production machine learning systems.",
 };
 
 const projects = [
@@ -139,7 +139,7 @@ export default function Home() {
       </nav>
 
       <header className="intro">
-        <p className="location">AI engineer & researcher · San Francisco</p>
+        <p className="location">ML Engineer and Researcher · San Francisco</p>
         <h1>Amos Roche</h1>
         <p className="intro-text">I work on machine learning, from the first experiment to the system that runs in production.</p>
       </header>
@@ -147,7 +147,7 @@ export default function Home() {
       <section id="about" className="about">
         <div className="about-copy">
           <h2>About me</h2>
-          <p>I&apos;m an AI engineer at <strong>Kaliber Labs</strong>, where I develop models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
+          <p>I&apos;m an ML engineer and researcher at <strong>Kaliber Labs</strong>, where I develop models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
           <p>Before that, I worked on advertising experimentation at <strong>Walmart</strong>, NLP and data engineering at <strong>Fidelity</strong>, and computer vision for aerial localization. I&apos;m interested in ML problems across domains, and in the work it takes to make a promising model useful.</p>
           <p>I studied data science at <strong>Columbia University</strong> (MS) and <strong>Worcester Polytechnic Institute</strong> (BS).</p>
           <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download résumé</a></div>

@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amos Roche — ML Engineer / Researcher",
-  description: "AI engineer working across model development, applied research, and production machine learning systems.",
+  title: "Amos Roche — ML Engineer and Researcher",
+  description: "ML engineer and researcher working across model development, applied research, and production machine learning systems.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
