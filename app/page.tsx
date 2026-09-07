@@ -125,177 +125,74 @@ const skills = [
 
 export default function Home() {
   return (
-    <main>
-      <a className="skip-link" href="#work">Skip to selected work</a>
-      <nav className="nav shell" aria-label="Primary navigation">
-        <a className="wordmark" href="#top" aria-label="Amos Roche home">
-          amos roche<span> / </span>
-        </a>
+    <main id="top" className="page">
+      <a className="skip-link" href="#about">Skip to content</a>
+      <nav className="nav" aria-label="Primary navigation">
+        <a className="wordmark" href="#top">Amos Roche</a>
         <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
-          <a className="resume-nav" href="/Amos-Roche-Resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
+          <a href="#about">About</a><a href="#work">Work</a>
+          <a href="#publications">Publications</a><a href="#contact">Contact</a>
+          <a href="/Amos-Roche-Resume.pdf" target="_blank" rel="noreferrer">Résumé</a>
         </div>
       </nav>
 
-      <section className="hero shell" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">AI ENGINEER & RESEARCHER · SAN FRANCISCO</p>
-          <h1>
-            Amos Roche<span className="name-dot">.</span>
-          </h1>
-          <p className="hero-intro">
-            I&apos;m an AI engineer working across model development, applied research, and production systems. I build end-to-end solutions—from data and experimentation to deployment.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-dark" href="#work">
-              Explore my work <span aria-hidden="true">↘</span>
-            </a>
-            <a className="text-link" href="mailto:ar4626@columbia.edu">
-              Get in touch <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-        <aside className="hero-panel" aria-label="Current work and education">
-          <p className="eyebrow"><span className="status-dot" /> CURRENTLY</p>
-          <h2>Machine learning<br />research.<br /><em>Real-world systems.</em></h2>
-          <div className="panel-row"><span>Building at</span><strong>Kaliber Labs ↗</strong></div>
-          <div className="panel-row"><span>Previously</span><strong>Walmart · Fidelity</strong></div>
-          <div className="panel-row"><span>Studied at</span><strong>Columbia · WPI</strong></div>
-        </aside>
-        <div className="hero-meta">
-          <span>MODELS / RESEARCH / SYSTEMS</span>
-          <span>Scroll to explore <b>↓</b></span>
-        </div>
-      </section>
+      <header className="intro">
+        <p className="location">AI engineer & researcher · San Francisco</p>
+        <h1>Amos Roche</h1>
+        <p className="intro-text">I work on machine learning, from the first experiment to the system that runs in production.</p>
+      </header>
 
-      <section className="about-section shell" id="about">
-        <div className="about-portrait">
-          <img src="/amos-roche-portrait.png" alt="Amos Roche" width={1224} height={1285} loading="lazy" decoding="async" />
-        </div>
+      <section id="about" className="about">
         <div className="about-copy">
-          <p className="eyebrow">A LITTLE ABOUT ME</p>
-          <h2>Curious by default.<br /><em>Rigorous by choice.</em></h2>
-          <p>
-            At Kaliber Labs, I develop speech models and production AI pipelines.
-            My background also spans advertising experimentation at Walmart,
-            NLP and data engineering at Fidelity, and computer vision research
-            for aerial localization. I studied data science at Columbia and WPI.
-            Across these domains, I bring the same focus: rigorous experiments
-            and useful, reliable systems.
-          </p>
+          <h2>About me</h2>
+          <p>I&apos;m an AI engineer at <strong>Kaliber Labs</strong>, where I develop models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
+          <p>Before that, I worked on advertising experimentation at <strong>Walmart</strong>, NLP and data engineering at <strong>Fidelity</strong>, and computer vision for aerial localization. I&apos;m interested in ML problems across domains, and in the work it takes to make a promising model useful.</p>
+          <p>I studied data science at <strong>Columbia University</strong> (MS) and <strong>Worcester Polytechnic Institute</strong> (BS).</p>
+          <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download résumé</a></div>
         </div>
-        <div className="about-facts">
-          <div><span>BASED IN</span><strong>San Francisco, CA</strong></div>
-          <div><span>EDUCATION</span><strong>MS Data Science<br />Columbia University</strong></div>
-          <div><span>EXPERIENCE ACROSS</span><strong>Speech · NLP · Computer vision<br />Experimentation · ML systems</strong></div>
-        </div>
+        <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait.png" alt="Amos Roche" width={1224} height={1285} decoding="async" /></div><figcaption>Based in San Francisco, California.</figcaption></figure>
       </section>
 
-      <section className="signal-band" aria-label="Focus areas">
-        <div className="signal-track">
-          <span>Model development</span><i>✳</i><span>Applied research</span><i>✳</i>
-          <span>Production ML</span>
-        </div>
-      </section>
-
-      <section className="work-section shell" id="work">
-        <div className="section-heading">
-          <p className="eyebrow">SELECTED WORK</p>
-          <h2>From first principles<br />to <em>in production.</em></h2>
-          <p className="section-note">A few things I&apos;ve built and researched.</p>
-        </div>
-        <div className="project-list">
-          {projects.map((project) => (
-            <a className="project-card" key={project.number} href={`#${project.id}-case-study`}>
-              <div className="project-number">{project.number}</div>
-              <div className="project-main">
-                <p className="project-tag">{project.tag}</p>
-                <h3>{project.title}</h3>
-                <p className="project-description">{project.description}</p>
+      <section id="work" className="section">
+        <div className="section-heading"><h2>Selected work</h2><span>Engineering & research</span></div>
+        {projects.map((project, index) => {
+          const study = caseStudies[index];
+          return <article className="work-entry" id={`${project.id}-case-study`} key={project.id}>
+            <div className="entry-heading"><h3>{project.title}</h3><span className="result">{project.result}</span></div>
+            <p>{project.description}</p>
+            <details>
+              <summary>More about this project</summary>
+              <div className="project-details">
+                <p className="confidential-note">{study.label.includes("CONFIDENTIAL") ? "Kaliber Labs · Details kept high-level for confidentiality." : "Research · arXiv preprint"}</p>
+                <h4>Problem</h4><p>{study.problem}</p>
+                <h4>Approach</h4><p>{study.approach}</p>
+                <h4>My contribution</h4><p>{study.ownership}</p>
+                <h4>Tools & methods</h4><p>{study.stack}</p>
+                <h4>Result</h4><p>{study.result}</p>
               </div>
-              <div className="project-result">
-                <span>OUTCOME</span>
-                <strong>{project.result}</strong>
-              </div>
-              <div className="project-arrow" aria-hidden="true">↗</div>
-            </a>
-          ))}
-        </div>
+            </details>
+          </article>;
+        })}
       </section>
 
-      <section className="case-studies shell" aria-label="Detailed case studies">
-        <div className="case-studies-heading">
-          <p className="eyebrow">CASE STUDIES</p>
-          <p>Selected details are intentionally high-level where the work is confidential.</p>
-        </div>
-        {caseStudies.map((study) => (
-          <article className="case-study" id={study.id} key={study.id}>
-            <div className="case-study-topline">
-              <span>{study.number}</span>
-              <span>{study.label}</span>
-            </div>
-            <div className="case-study-grid">
-              <h3>{study.title}</h3>
-              <div className="case-study-details">
-                <div><span>THE PROBLEM</span><p>{study.problem}</p></div>
-                <div><span>MY APPROACH</span><p>{study.approach}</p></div>
-                <div><span>TECHNICAL STACK</span><p>{study.stack}</p></div>
-                <div><span>RESULT</span><p className="case-result">{study.result}</p></div>
-                <div><span>WHAT I OWNED</span><p>{study.ownership}</p></div>
-              </div>
-            </div>
-          </article>
-        ))}
-      </section>
-
-      <section className="publications-section shell" id="publications">
-        <div className="section-heading publication-heading">
-          <p className="eyebrow">PUBLICATIONS</p>
-          <h2>Research in<br /><em>the open.</em></h2>
-          <p className="section-note">Papers on speech, language, and applied machine learning.</p>
-        </div>
-        <div className="publication-list">
-          {publications.map((publication) => (
-            <article className="publication-card" key={publication.title}>
-              <div className="publication-year">{publication.year}</div>
-              <div className="publication-content">
-                <p className="publication-type">{publication.type}</p>
-                <h3>{publication.title}</h3>
-                <p className="publication-authors">{publication.authors}</p>
-                <p className="publication-summary">{publication.summary}</p>
-              </div>
-              <a className="publication-link" href={publication.href} target="_blank" rel="noreferrer">
-                {publication.action} <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="skills-section shell">
-        <p className="eyebrow">THE TOOLKIT</p>
-        <div className="skills-grid">
-          {skills.map((skill) => <span key={skill}>{skill}</span>)}
-        </div>
-      </section>
-
-      <footer className="footer shell" id="contact">
-        <div>
-          <p className="eyebrow">HAVE A GOOD PROBLEM?</p>
-          <h2>Let&apos;s make<br /><em>something useful.</em></h2>
-        </div>
-        <div className="footer-right">
-          <a className="button button-light" href="mailto:ar4626@columbia.edu">Say hello <span aria-hidden="true">↗</span></a>
-          <div className="footer-links">
-            <a href="/Amos-Roche-Resume.pdf" download>Résumé ↓</a>
-            <a href="https://www.linkedin.com/in/amos-roche">LinkedIn ↗</a>
-            <a href="https://github.com/amosr2002">GitHub ↗</a>
+      <section id="publications" className="section">
+        <div className="section-heading"><h2>Publications</h2><span>2022–2026</span></div>
+        {publications.map((publication) => <article className="publication" key={publication.title}>
+          <span className="publication-year">{publication.year}</span>
+          <div><h3><a href={publication.href} target="_blank" rel="noreferrer">{publication.title}</a></h3>
+            <p className="authors">{publication.authors}</p>
+            <p>{publication.summary}</p>
+            <a className="paper-link" href={publication.href} target="_blank" rel="noreferrer">{publication.action} ↗</a>
           </div>
-        </div>
-        <div className="footer-bottom"><span>© 2026 Amos Roche</span><span>Made with curiosity.</span></div>
+        </article>)}
+      </section>
+
+      <section className="section tools"><h2>Tools & methods</h2><p>{skills.join(" · ")}</p></section>
+      <footer id="contact">
+        <h2>Get in touch</h2>
+        <p>For opportunities, research, or a conversation about what you&apos;re building:</p>
+        <a className="email" href="mailto:ar4626@columbia.edu">ar4626@columbia.edu</a>
+        <div className="footer-bottom"><span>© 2026 Amos Roche</span><a href="#top">Back to top ↑</a></div>
       </footer>
     </main>
   );
