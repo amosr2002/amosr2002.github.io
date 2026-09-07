@@ -116,3 +116,7 @@ footer > p { margin-bottom: 8px; }
 .career-summary dd { margin: 2px 0 0; }
 .career-summary abbr { text-decoration: none; }
 @media (max-width: 540px) { .profile { width: 210px; } }
+
+.sports-results-image { width: min(100%, 400px); margin: 20px auto 0; }
+.sports-results-image img { display: block; width: 100%; height: auto; }
+.sports-results-image figcaption { text-align: center; }

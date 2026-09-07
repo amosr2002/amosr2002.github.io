@@ -195,6 +195,13 @@ export default function Home() {
         <article className="work-entry" id="sports-betting-analytics">
           <div className="entry-heading"><h3>Sports betting analytics</h3><span className="result">Independent project</span></div>
           <p>Analyzed sportsbook pricing, compared expected value across markets, tracked closing-line value, and applied the Kelly criterion to bankroll allocation. Identified arbitrage and middling opportunities and evaluated risk across different bet types.</p>
+          <details className="sports-results">
+            <summary>View image (meme edition)</summary>
+            <figure className="sports-results-image">
+              <img src="/sports-analytics-meme.png" alt="Edited Pikkit-style graph labeled Meme edition, showing 22.99% ROI and a 939–1721–85 record. This is not a verified results statement." width={1144} height={1376} loading="lazy" decoding="async" />
+              <figcaption>Edited image · Meme edition</figcaption>
+            </figure>
+          </details>
         </article>
       </section>
 
