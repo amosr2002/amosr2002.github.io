@@ -108,3 +108,11 @@ footer > p { margin-bottom: 8px; }
 .show-in-dark { display: none; }
 :root[data-theme="dark"] .show-in-light { display: none; }
 :root[data-theme="dark"] .show-in-dark { display: inline; }
+
+.profile { width: 100%; align-self: center; justify-self: center; }
+.career-summary { margin: 24px 0 0; font-size: .875rem; line-height: 1.65; }
+.career-summary > div { margin-top: 13px; }
+.career-summary dt { color: var(--muted); font-size: .75rem; }
+.career-summary dd { margin: 2px 0 0; }
+.career-summary abbr { text-decoration: none; }
+@media (max-width: 540px) { .profile { width: 210px; } }

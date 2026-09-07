@@ -147,12 +147,18 @@ export default function Home() {
       <section id="about" className="about">
         <div className="about-copy">
           <h2>About me</h2>
-          <p>I&apos;m an ML engineer and researcher at <strong>Kaliber Labs</strong>, where I develop models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
-          <p>Before that, I worked on advertising experimentation at <strong>Walmart</strong>, NLP and data engineering at <strong>Fidelity</strong>, and computer vision for aerial localization. I&apos;m interested in ML problems across domains, and in the work it takes to make a promising model useful.</p>
-          <p>I studied data science at <strong>Columbia University</strong> (MS) and <strong>Worcester Polytechnic Institute</strong> (BS).</p>
+          <p>I&apos;m an ML engineer and researcher developing models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
+          <p>My background also spans advertising experimentation, NLP, data engineering, and computer vision for aerial localization. I&apos;m interested in ML problems across domains, and in the work it takes to make a promising model useful.</p>
           <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download résumé</a></div>
         </div>
-        <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait.png" alt="Amos Roche" width={1224} height={1285} decoding="async" /></div><figcaption>Based in San Francisco, California.</figcaption></figure>
+        <aside className="profile" aria-label="Career summary">
+          <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait.png" alt="Amos Roche" width={1224} height={1285} decoding="async" /></div></figure>
+          <dl className="career-summary">
+            <div><dt>Now</dt><dd>Kaliber Labs</dd></div>
+            <div><dt>Previously</dt><dd>Walmart · Fidelity</dd></div>
+            <div><dt>Education</dt><dd><abbr title="Columbia University, Master of Science in Data Science">Columbia MS</abbr> · <abbr title="Worcester Polytechnic Institute, Bachelor of Science in Data Science">WPI BS</abbr></dd></div>
+          </dl>
+        </aside>
       </section>
 
       <section id="work" className="section">
