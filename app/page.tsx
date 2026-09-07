@@ -172,7 +172,9 @@ export default function Home() {
       </section>
 
       <section className="about-section shell" id="about">
-        <div className="about-stamp" aria-hidden="true">AM<br />R</div>
+        <div className="about-portrait">
+          <img src="/amos-roche-portrait.png" alt="Amos Roche" width={1224} height={1285} loading="lazy" decoding="async" />
+        </div>
         <div className="about-copy">
           <p className="eyebrow">A LITTLE ABOUT ME</p>
           <h2>Curious by default.<br /><em>Rigorous by choice.</em></h2>
