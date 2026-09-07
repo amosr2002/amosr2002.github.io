@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Amos Roche — ML Engineer / Researcher",
   description:
-    "Amos Roche is an ML engineer and researcher working across speech, healthcare, and machine learning systems.",
+    "Amos Roche is an AI engineer working across model development, applied research, and production machine learning systems.",
 };
 
 const projects = [
@@ -108,6 +108,10 @@ const skills = [
   "Python",
   "PyTorch",
   "Transformers",
+  "Computer Vision",
+  "Scikit-learn",
+  "SQL",
+  "OpenCV",
   "TTS",
   "WavLM",
   "Flow Matching",
@@ -128,9 +132,9 @@ export default function Home() {
           amos roche<span> / </span>
         </a>
         <div className="nav-links">
+          <a href="#about">About</a>
           <a href="#work">Work</a>
           <a href="#publications">Publications</a>
-          <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a className="resume-nav" href="/Amos-Roche-Resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
         </div>
@@ -143,7 +147,7 @@ export default function Home() {
             Amos Roche<span className="name-dot">.</span>
           </h1>
           <p className="hero-intro">
-            I build machine learning systems that speak, listen, and support care. My work connects speech research with the practical demands of real clinical environments.
+            I&apos;m an AI engineer working across model development, applied research, and production systems. I build end-to-end solutions—from data and experimentation to deployment.
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#work">
@@ -156,21 +160,42 @@ export default function Home() {
         </div>
         <aside className="hero-panel" aria-label="Current work and education">
           <p className="eyebrow"><span className="status-dot" /> CURRENTLY</p>
-          <h2>From research<br />to real-world<br /><em>intelligence.</em></h2>
+          <h2>Machine learning<br />research.<br /><em>Real-world systems.</em></h2>
           <div className="panel-row"><span>Building at</span><strong>Kaliber Labs ↗</strong></div>
           <div className="panel-row"><span>Previously</span><strong>Walmart · Fidelity</strong></div>
           <div className="panel-row"><span>Studied at</span><strong>Columbia · WPI</strong></div>
         </aside>
         <div className="hero-meta">
-          <span>SPEECH / LANGUAGE / HEALTHCARE</span>
+          <span>MODELS / RESEARCH / SYSTEMS</span>
           <span>Scroll to explore <b>↓</b></span>
+        </div>
+      </section>
+
+      <section className="about-section shell" id="about">
+        <div className="about-stamp" aria-hidden="true">AM<br />R</div>
+        <div className="about-copy">
+          <p className="eyebrow">A LITTLE ABOUT ME</p>
+          <h2>Curious by default.<br /><em>Rigorous by choice.</em></h2>
+          <p>
+            At Kaliber Labs, I develop speech models and production AI pipelines.
+            My background also spans advertising experimentation at Walmart,
+            NLP and data engineering at Fidelity, and computer vision research
+            for aerial localization. I studied data science at Columbia and WPI.
+            Across these domains, I bring the same focus: rigorous experiments
+            and useful, reliable systems.
+          </p>
+        </div>
+        <div className="about-facts">
+          <div><span>BASED IN</span><strong>San Francisco, CA</strong></div>
+          <div><span>EDUCATION</span><strong>MS Data Science<br />Columbia University</strong></div>
+          <div><span>EXPERIENCE ACROSS</span><strong>Speech · NLP · Computer vision<br />Experimentation · ML systems</strong></div>
         </div>
       </section>
 
       <section className="signal-band" aria-label="Focus areas">
         <div className="signal-track">
-          <span>Speech AI</span><i>✳</i><span>Clinical systems</span><i>✳</i>
-          <span>Applied research</span>
+          <span>Model development</span><i>✳</i><span>Applied research</span><i>✳</i>
+          <span>Production ML</span>
         </div>
       </section>
 
@@ -245,31 +270,6 @@ export default function Home() {
               </a>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="about-section shell" id="about">
-        <div className="about-stamp" aria-hidden="true">AM<br />R</div>
-        <div className="about-copy">
-          <p className="eyebrow">A LITTLE ABOUT ME</p>
-          <h2>Curious by default.<br /><em>Rigorous by choice.</em></h2>
-          <p>
-            My work lives at the intersection of research and reality. At
-            Kaliber Labs, I build models and pipelines that have to work
-            outside the notebook. Before that, I studied data science at
-            Columbia and WPI, and worked across ads, data engineering, and
-            applied NLP.
-          </p>
-          <p>
-            I&apos;m especially drawn to problems where the data is messy, the
-            constraints are real, and a thoughtful system can make someone&apos;s
-            day a little easier.
-          </p>
-        </div>
-        <div className="about-facts">
-          <div><span>BASED IN</span><strong>San Francisco, CA</strong></div>
-          <div><span>EDUCATION</span><strong>MS Data Science<br />Columbia University</strong></div>
-          <div><span>INTERESTS</span><strong>Audio · Language · Care<br />Edge inference · Vision</strong></div>
         </div>
       </section>
 
