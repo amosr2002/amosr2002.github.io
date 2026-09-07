@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ThemeToggle from "./theme-toggle";
+import ProjectThumbnail from "./project-thumbnail";
 
 export const metadata: Metadata = {
   title: "Amos Roche — ML Engineer and Researcher",
@@ -166,6 +167,8 @@ export default function Home() {
         {projects.map((project, index) => {
           const study = caseStudies[index];
           return <article className="work-entry" id={`${project.id}-case-study`} key={project.id}>
+            <ProjectThumbnail kind={project.id as "tts" | "clinical" | "mtl"} />
+            <div className="work-body">
             <div className="entry-heading"><h3>{project.title}</h3><span className="result">{project.result}</span></div>
             <p>{project.description}</p>
             <details>
@@ -179,20 +182,29 @@ export default function Home() {
                 <h4>Result</h4><p>{study.result}</p>
               </div>
             </details>
+            </div>
           </article>;
         })}
         <article className="work-entry" id="aerial-localization">
+          <ProjectThumbnail kind="aerial" />
+          <div className="work-body">
           <div className="entry-heading"><h3>Aerial image understanding and localization</h3><span className="result">Computer vision</span></div>
           <p className="confidential-note">Undergraduate capstone · WPI · 2023</p>
           <p>Developed a computer vision pipeline for GPS-denied aerial localization, using semantic segmentation to identify geographic regions and a neural network to estimate positional changes between aerial images.</p>
           <a className="paper-link" href="https://digital.wpi.edu/concern/student_works/hx11xj644?locale=en" target="_blank" rel="noreferrer">Read project report ↗</a>
+                  </div>
         </article>
         <article className="work-entry" id="market-forecasting">
+          <ProjectThumbnail kind="market" />
+          <div className="work-body">
           <div className="entry-heading"><h3>Stock market forecasting</h3><span className="result">Time-series modeling</span></div>
           <p className="confidential-note">Columbia University capstone with JPMorgan Chase &amp; Co.</p>
           <p>Collaborated on a forecasting system using historical market data, trading volumes, options pricing, and machine learning. Explored traditional market analysis, the Black–Scholes model, deep learning, and Prophet to investigate patterns in stock market data.</p>
+                  </div>
         </article>
         <article className="work-entry" id="sports-betting-analytics">
+          <ProjectThumbnail kind="sports" />
+          <div className="work-body">
           <div className="entry-heading"><h3>Sports betting analytics</h3><span className="result">Independent project</span></div>
           <p>Analyzed sportsbook pricing, compared expected value across markets, tracked closing-line value, and applied the Kelly criterion to bankroll allocation. Identified arbitrage and middling opportunities and evaluated risk across different bet types.</p>
           <details className="sports-results">
@@ -202,6 +214,7 @@ export default function Home() {
               <figcaption>Pikkit · All-time results as of September 7, 2026</figcaption>
             </figure>
           </details>
+                  </div>
         </article>
       </section>
 

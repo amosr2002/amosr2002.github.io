@@ -120,3 +120,22 @@ footer > p { margin-bottom: 8px; }
 .sports-results-image { width: min(100%, 400px); margin: 20px auto 0; }
 .sports-results-image img { display: block; width: 100%; height: auto; }
 .sports-results-image figcaption { text-align: center; }
+
+.work-entry { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 26px; margin-bottom: 42px; }
+.work-body { min-width: 0; }
+.work-body > p { margin-bottom: 8px; }
+.work-body .entry-heading { flex-direction: column; gap: 3px; }
+.work-body .result { text-align: left; }
+.project-thumbnail { margin: 0; align-self: start; }
+.thumbnail-frame { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 18/11; overflow: hidden; border: 1px solid var(--line); border-radius: 4px; background: #eee2d1; color: var(--muted); position: relative; }
+.thumbnail-frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.paper-thumbnail { background: #fff; padding: 9px; }
+.aerial-thumbnail img { object-fit: cover; }
+.sports-thumbnail { background: #10151b; }
+.sports-thumbnail img { position: absolute; width: 108%; max-width: none; height: auto; left: -4%; top: -70%; }
+.workflow-thumbnail svg { width: 100%; height: 100%; }
+.diagram-model { fill: var(--paper); stroke: var(--accent); }
+.project-thumbnail figcaption { font-size: .75rem; margin-top: 7px; color: var(--muted); }
+:root[data-theme="dark"] .workflow-thumbnail { background: #302920; }
+@media (max-width: 760px) { .work-entry { grid-template-columns: 170px minmax(0, 1fr); gap: 20px; } }
+@media (max-width: 540px) { .work-entry { grid-template-columns: 1fr; gap: 15px; } .project-thumbnail { width: min(100%, 280px); } }
