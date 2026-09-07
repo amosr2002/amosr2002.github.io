@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #fff;
-  --ink: #24272b;
-  --muted: #60666d;
-  --accent: #234ea0;
-  --line: #dedfe2;
+  --paper: #f3ebdf;
+  --ink: #342c26;
+  --muted: #716354;
+  --accent: #914b32;
+  --line: #d7c8b6;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 36px; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-geist-sans), Arial, sans-serif; font-size: 16px; line-height: 1.8; }
-::selection { background: #dce6fb; }
+::selection { background: #dfbea2; color: var(--ink); }
 a { color: var(--accent); text-underline-offset: 4px; text-decoration-thickness: 1px; }
 a:hover { text-decoration: underline; }
 a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
@@ -22,7 +22,7 @@ h3 { font-size: 1.125rem; line-height: 1.5; font-weight: 600; letter-spacing: -.
 h4 { font-size: 1rem; font-weight: 600; margin-bottom: 5px; }
 strong { font-weight: 600; }
 .page { width: min(960px, calc(100% - 64px)); margin: 0 auto; }
-.skip-link { position: fixed; top: -100px; left: 16px; background: white; padding: 10px; z-index: 10; }
+.skip-link { position: fixed; top: -100px; left: 16px; background: var(--paper); padding: 10px; z-index: 10; }
 .skip-link:focus { top: 10px; }
 .nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 32px 0; border-bottom: 1px solid var(--line); }
 .wordmark { font-weight: 600; color: var(--ink); }
@@ -38,7 +38,7 @@ h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(3.2rem, 6.
 .personal-links { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: .875rem; margin-top: 24px; }
 .personal-links a { text-decoration: underline; }
 .portrait { margin: 2px 0 0; align-self: start; }
-.portrait-frame { overflow: hidden; position: relative; aspect-ratio: 4/5; background: #fff; }
+.portrait-frame { outline: 1px solid var(--line); outline-offset: 6px; overflow: hidden; position: relative; aspect-ratio: 4/5; background: #fff; }
 .portrait img { position: absolute; width: 145%; max-width: none; height: 145%; left: -22.5%; top: -23%; object-fit: cover; object-position: 50% 65%; }
 figcaption { color: var(--muted); font-size: .75rem; line-height: 1.6; margin-top: 12px; }
 .section { border-top: 1px solid var(--line); padding: 34px 0 48px; }
