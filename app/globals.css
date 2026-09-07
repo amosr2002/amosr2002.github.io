@@ -26,7 +26,7 @@ strong { font-weight: 600; }
 .skip-link:focus { top: 10px; }
 .nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 32px 0; border-bottom: 1px solid var(--line); }
 .wordmark { font-weight: 600; color: var(--ink); }
-.nav-links { display: flex; flex-wrap: wrap; gap: 25px; font-size: .875rem; }
+.nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; font-size: .875rem; }
 .nav-links a { color: var(--muted); }
 .intro { padding: 66px 0 36px; }
 .location { font-size: .875rem; color: var(--muted); margin-bottom: 14px; }
@@ -37,7 +37,7 @@ h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(3.2rem, 6.
 .about-copy p { max-width: 660px; }
 .personal-links { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: .875rem; margin-top: 24px; }
 .personal-links a { text-decoration: underline; }
-.portrait { margin: 2px 0 0; align-self: start; }
+.portrait { margin: 0; width: 100%; align-self: center; justify-self: center; text-align: center; }
 .portrait-frame { outline: 1px solid var(--line); outline-offset: 6px; overflow: hidden; position: relative; aspect-ratio: 4/5; background: #fff; }
 .portrait img { position: absolute; width: 145%; max-width: none; height: 145%; left: -22.5%; top: -23%; object-fit: cover; object-position: 50% 65%; }
 figcaption { color: var(--muted); font-size: .75rem; line-height: 1.6; margin-top: 12px; }
@@ -92,3 +92,19 @@ footer > p { margin-bottom: 8px; }
   .project-details { padding-left: 15px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+:root[data-theme="dark"] {
+  --paper: #25211d;
+  --ink: #efe5d7;
+  --muted: #c1b19e;
+  --accent: #e6aa88;
+  --line: #514538;
+  color-scheme: dark;
+}
+:root[data-theme="dark"] ::selection { background: #704a36; color: var(--ink); }
+.theme-toggle { font: inherit; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 5px; padding: 4px 10px; min-height: 36px; cursor: pointer; white-space: nowrap; }
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.show-in-dark { display: none; }
+:root[data-theme="dark"] .show-in-light { display: none; }
+:root[data-theme="dark"] .show-in-dark { display: inline; }

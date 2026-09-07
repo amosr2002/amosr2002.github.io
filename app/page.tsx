@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ThemeToggle from "./theme-toggle";
 
 export const metadata: Metadata = {
   title: "Amos Roche — ML Engineer / Researcher",
@@ -133,6 +134,7 @@ export default function Home() {
           <a href="#about">About</a><a href="#work">Work</a>
           <a href="#publications">Publications</a><a href="#contact">Contact</a>
           <a href="/Amos-Roche-Resume.pdf" target="_blank" rel="noreferrer">Résumé</a>
+          <ThemeToggle />
         </div>
       </nav>
 
