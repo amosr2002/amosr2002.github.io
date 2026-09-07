@@ -187,6 +187,15 @@ export default function Home() {
           <p>Developed a computer vision pipeline for GPS-denied aerial localization, using semantic segmentation to identify geographic regions and a neural network to estimate positional changes between aerial images.</p>
           <a className="paper-link" href="https://digital.wpi.edu/concern/student_works/hx11xj644?locale=en" target="_blank" rel="noreferrer">Read project report ↗</a>
         </article>
+        <article className="work-entry" id="market-forecasting">
+          <div className="entry-heading"><h3>Stock market forecasting</h3><span className="result">Time-series modeling</span></div>
+          <p className="confidential-note">Columbia University capstone with JPMorgan Chase &amp; Co.</p>
+          <p>Collaborated on a forecasting system using historical market data, trading volumes, options pricing, and machine learning. Explored traditional market analysis, the Black–Scholes model, deep learning, and Prophet to investigate patterns in stock market data.</p>
+        </article>
+        <article className="work-entry" id="sports-betting-analytics">
+          <div className="entry-heading"><h3>Sports betting analytics</h3><span className="result">Independent project</span></div>
+          <p>Analyzed sportsbook pricing, compared expected value across markets, tracked closing-line value, and applied the Kelly criterion to bankroll allocation. Identified arbitrage and middling opportunities and evaluated risk across different bet types.</p>
+        </article>
       </section>
 
       <section id="publications" className="section">
