@@ -129,7 +129,6 @@ export default function Home() {
     <main id="top" className="page">
       <a className="skip-link" href="#about">Skip to content</a>
       <nav className="nav" aria-label="Primary navigation">
-        <a className="wordmark" href="#top">Amos Roche</a>
         <div className="nav-links">
           <a href="#about">About</a><a href="#work">Work</a>
           <a href="#publications">Publications</a><a href="#contact">Contact</a>
@@ -150,20 +149,20 @@ export default function Home() {
           <p>I&apos;m an ML engineer and researcher at <strong>Kaliber Labs</strong>, where I develop models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
           <p>Before that, I worked on advertising experimentation at <strong>Walmart</strong>, NLP and data engineering at <strong>Fidelity</strong>, and computer vision for aerial localization. I&apos;m interested in ML problems across domains, and in the work it takes to make a promising model useful.</p>
           <p>I studied data science at <strong>Columbia University</strong> (MS) and <strong>Worcester Polytechnic Institute</strong> (BS).</p>
-          <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download résumé</a></div>
+          <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Résumé</a></div>
         </div>
-        <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait.png" alt="Amos Roche" width={1224} height={1285} decoding="async" /></div><figcaption>Based in San Francisco, California.</figcaption></figure>
+        <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait.png" alt="Amos Roche" width={1224} height={1285} decoding="async" /></div></figure>
       </section>
 
       <section id="work" className="section">
-        <div className="section-heading"><h2>Selected work</h2><span>Engineering & research</span></div>
+        <div className="section-heading"><h2>Selected work</h2></div>
         {projects.map((project, index) => {
           const study = caseStudies[index];
           return <article className="work-entry" id={`${project.id}-case-study`} key={project.id}>
             <div className="entry-heading"><h3>{project.title}</h3><span className="result">{project.result}</span></div>
             <p>{project.description}</p>
             <details>
-              <summary>More about this project</summary>
+              <summary>Project details</summary>
               <div className="project-details">
                 <p className="confidential-note">{study.label.includes("CONFIDENTIAL") ? "Kaliber Labs · Details kept high-level for confidentiality." : "Research · arXiv preprint"}</p>
                 <h4>Problem</h4><p>{study.problem}</p>
@@ -178,7 +177,7 @@ export default function Home() {
       </section>
 
       <section id="publications" className="section">
-        <div className="section-heading"><h2>Publications</h2><span>2022–2026</span></div>
+        <div className="section-heading"><h2>Publications</h2></div>
         {publications.map((publication) => <article className="publication" key={publication.title}>
           <span className="publication-year">{publication.year}</span>
           <div><h3><a href={publication.href} target="_blank" rel="noreferrer">{publication.title}</a></h3>
@@ -191,8 +190,7 @@ export default function Home() {
 
       <section className="section tools"><h2>Tools & methods</h2><p>{skills.join(" · ")}</p></section>
       <footer id="contact">
-        <h2>Get in touch</h2>
-        <p>For opportunities, research, or a conversation about what you&apos;re building:</p>
+        <h2>Contact</h2>
         <a className="email" href="mailto:ar4626@columbia.edu">ar4626@columbia.edu</a>
         <div className="footer-bottom"><span>© 2026 Amos Roche</span><a href="#top">Back to top ↑</a></div>
       </footer>
