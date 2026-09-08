@@ -127,15 +127,10 @@ footer > p { margin-bottom: 8px; }
 .work-body .entry-heading { flex-direction: column; gap: 3px; }
 .work-body .result { text-align: left; }
 .project-thumbnail { margin: 0; align-self: start; }
-.thumbnail-frame { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 18/11; overflow: hidden; border: 1px solid var(--line); border-radius: 4px; background: #eee2d1; color: var(--muted); position: relative; }
-.thumbnail-frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
-.paper-thumbnail { background: #fff; padding: 9px; }
-.aerial-thumbnail img { object-fit: cover; }
-.sports-thumbnail { background: #10151b; }
-.sports-thumbnail img { position: absolute; width: 108%; max-width: none; height: auto; left: -4%; top: -70%; }
-.workflow-thumbnail svg { width: 100%; height: 100%; }
-.diagram-model { fill: var(--paper); stroke: var(--accent); }
-.project-thumbnail figcaption { font-size: .75rem; margin-top: 7px; color: var(--muted); }
-:root[data-theme="dark"] .workflow-thumbnail { background: #302920; }
+.minimal-thumbnail { padding-top: 3px; }
+.project-marker { display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 68px; padding: 0 0 13px; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+.project-marker[href]:hover .project-discipline { color: var(--accent); }
+.project-number { font-family: Georgia, serif; font-size: 2rem; line-height: 1; letter-spacing: -.06em; }
+.project-discipline { margin-top: 10px; color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
 @media (max-width: 760px) { .work-entry { grid-template-columns: 170px minmax(0, 1fr); gap: 20px; } }
-@media (max-width: 540px) { .work-entry { grid-template-columns: 1fr; gap: 15px; } .project-thumbnail { width: min(100%, 280px); } }
+@media (max-width: 540px) { .work-entry { grid-template-columns: 1fr; gap: 15px; } .project-thumbnail { width: min(100%, 280px); } .project-marker { min-height: 52px; } }

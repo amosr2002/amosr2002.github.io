@@ -1,4 +1,6 @@
-# Thumbnail sources
+# Previous thumbnail sources
+
+The selected-work list now uses text-only project markers. The assets below remain in the repository for provenance but are no longer displayed as thumbnails.
 
 - articulatory-architecture.png: Figure 2, page 8, arXiv:2608.22273v1. Rendered directly from the PDF, clipped to the original diagram; no alterations to the figure. https://arxiv.org/abs/2608.22273
 - aerial-segmentation.png: original embedded image from Figure 58, page 87, Feature Recognition from Aerial Images Using Machine Learning (WPI, 2023). Dataset scene of grass and buildings, not a model prediction. https://digital.wpi.edu/concern/student_works/hx11xj644?locale=en
