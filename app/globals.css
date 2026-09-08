@@ -138,14 +138,25 @@ footer > p { margin-bottom: 8px; }
 .project-marker:focus-visible { outline: 1px solid var(--accent); outline-offset: 5px; }
 .marker-link { display: inline-block; margin-top: 7px; color: var(--muted); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
 .marker-link:hover { color: var(--accent); }
-.thumb-trace, .thumb-axis, .thumb-grid { fill: none; stroke: var(--accent); stroke-linecap: round; stroke-linejoin: round; }
+.thumb-trace, .thumb-axis, .thumb-grid, .thumb-book-line, .thumb-candles path { fill: none; stroke: var(--accent); stroke-linecap: round; stroke-linejoin: round; }
 .thumb-trace { stroke-width: 1.5; stroke-dasharray: 240; stroke-dashoffset: 240; }
 .thumb-axis, .thumb-grid { stroke: var(--line); stroke-width: 1; }
 .thumb-node { fill: var(--accent); opacity: .35; transform-box: fill-box; transform-origin: center; }
 .thumb-radar { fill: none; stroke: var(--accent); stroke-width: 1; opacity: .35; transform-box: fill-box; transform-origin: center; }
+.thumb-block { fill: var(--paper); stroke: var(--accent); stroke-width: 1; opacity: .55; transform-box: fill-box; transform-origin: center; }
+.thumb-text { fill: var(--accent); font-family: Arial, sans-serif; font-size: 7px; font-weight: 600; text-anchor: middle; opacity: .75; }
+.thumb-candles path { stroke-width: 1.3; stroke-dasharray: 160; stroke-dashoffset: 160; }
+.thumb-forecast { fill: none; stroke: var(--accent); stroke-width: 1.4; stroke-dasharray: 3 3; stroke-dashoffset: 32; }
+.thumb-book-line { stroke: var(--line); stroke-width: 1; }
+.thumb-odds { fill: var(--accent); opacity: .35; transform: scaleX(.1); transform-origin: left center; }
 .project-marker:hover .thumb-trace, .project-marker:focus-visible .thumb-trace, .project-marker.is-animated .thumb-trace { animation: draw-trace .8s ease-out forwards; }
 .project-marker:hover .thumb-node, .project-marker:focus-visible .thumb-node, .project-marker.is-animated .thumb-node { animation: pulse-node .65s ease-out forwards; }
 .project-marker:hover .thumb-radar, .project-marker:focus-visible .thumb-radar, .project-marker.is-animated .thumb-radar { animation: radar .8s ease-out forwards; }
+.project-marker:hover .thumb-block, .project-marker:focus-visible .thumb-block, .project-marker.is-animated .thumb-block { animation: block-light .65s ease-out forwards; }
+.project-marker:hover .thumb-candles path, .project-marker:focus-visible .thumb-candles path, .project-marker.is-animated .thumb-candles path { animation: draw-trace .75s ease-out forwards; }
+.project-marker:hover .thumb-forecast, .project-marker:focus-visible .thumb-forecast, .project-marker.is-animated .thumb-forecast { animation: forecast-draw .75s .35s ease-out forwards; }
+.project-marker:hover .thumb-odds, .project-marker:focus-visible .thumb-odds, .project-marker.is-animated .thumb-odds { animation: odds-grow .6s ease-out forwards; }
+.project-marker:hover .odds-two, .project-marker.is-animated .odds-two { animation-delay: .18s; }
 .project-marker:hover .node-two, .project-marker.is-animated .node-two { animation-delay: .12s; }
 .project-marker:hover .node-three, .project-marker.is-animated .node-three { animation-delay: .22s; }
 .project-marker:hover .node-four, .project-marker.is-animated .node-four { animation-delay: .34s; }
@@ -153,6 +164,9 @@ footer > p { margin-bottom: 8px; }
 @keyframes draw-trace { to { stroke-dashoffset: 0; } }
 @keyframes pulse-node { 45% { opacity: 1; transform: scale(1.75); } to { opacity: .72; transform: scale(1); } }
 @keyframes radar { 50% { opacity: .8; transform: scale(1.8); } to { opacity: .35; transform: scale(1); } }
-@media (prefers-reduced-motion: reduce) { .project-marker:hover .thumb-trace, .project-marker:focus-visible .thumb-trace, .project-marker.is-animated .thumb-trace, .project-marker:hover .thumb-node, .project-marker:focus-visible .thumb-node, .project-marker.is-animated .thumb-node, .project-marker:hover .thumb-radar, .project-marker:focus-visible .thumb-radar, .project-marker.is-animated .thumb-radar { animation: none; stroke-dashoffset: 0; opacity: .72; } }
+@keyframes block-light { 45% { opacity: 1; transform: scale(1.08); } to { opacity: .72; transform: scale(1); } }
+@keyframes forecast-draw { to { stroke-dashoffset: 0; } }
+@keyframes odds-grow { to { opacity: .7; transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .project-marker:hover .thumb-trace, .project-marker:focus-visible .thumb-trace, .project-marker.is-animated .thumb-trace, .project-marker:hover .thumb-node, .project-marker:focus-visible .thumb-node, .project-marker.is-animated .thumb-node, .project-marker:hover .thumb-radar, .project-marker:focus-visible .thumb-radar, .project-marker.is-animated .thumb-radar, .project-marker:hover .thumb-block, .project-marker:focus-visible .thumb-block, .project-marker.is-animated .thumb-block, .project-marker:hover .thumb-candles path, .project-marker:focus-visible .thumb-candles path, .project-marker.is-animated .thumb-candles path, .project-marker:hover .thumb-forecast, .project-marker:focus-visible .thumb-forecast, .project-marker.is-animated .thumb-forecast, .project-marker:hover .thumb-odds, .project-marker:focus-visible .thumb-odds, .project-marker.is-animated .thumb-odds { animation: none; stroke-dashoffset: 0; opacity: .72; transform: scaleX(1); } }
 @media (max-width: 760px) { .work-entry { grid-template-columns: 170px minmax(0, 1fr); gap: 20px; } }
 @media (max-width: 540px) { .work-entry { grid-template-columns: 1fr; gap: 15px; } .project-thumbnail { width: min(100%, 280px); } .animate-label { opacity: 1; } }
