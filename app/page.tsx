@@ -15,7 +15,7 @@ const projects = [
     title: "Expressive speech systems",
     tag: "SPEECH / GENERATIVE AI",
     description:
-      "A production-minded TTS system built from 10M+ speech clips, combining conditional flow matching with state-space architectures for more expressive, natural speech.",
+      "An expressive TTS system built around natural conversational speech, precise prosody, and stable long-form delivery. The work spans a purpose-built labeling studio, low-latency prosody research, and a CosyVoice-style conditional flow-matching pipeline.",
     result: "10M+ clips assembled",
   },
   {
@@ -36,13 +36,13 @@ const caseStudies = [
     label: "CONFIDENTIAL WORK · KALIBER LABS",
     title: "Making synthetic speech feel less synthetic.",
     problem:
-      "Expressive speech is difficult to model: natural delivery depends on timing, emphasis, and subtle variation that basic text-to-speech systems often flatten. The challenge was to build a stronger foundation for naturalness while working with a large, heterogeneous speech corpus.",
+      "Natural delivery depends on timing, pause structure, vocal events, emotion, and small changes in pitch and energy. Standard speech datasets rarely capture these details well enough to train for conversational expression, and long-form generation can also introduce speaker drift and discontinuities between streamed chunks.",
     approach:
-      "I assembled and curated a 10M+ clip training corpus, then worked across conditional flow-matching and state-space approaches to model speech with more expressive behavior. The work balanced research iteration with the practical constraints of training and inference.",
-    stack: "Python · PyTorch · Audio preprocessing · CUDA · Flow matching · State-space models",
+      "I built a reviewable dataset workflow for timestamped phonemes, paralinguistic events, speech behaviors, and emotion labels. In parallel, I explored a FastPitch plus state-space prosody module for lower-latency, frame-level control, then moved toward a two-stage CosyVoice-style architecture in which semantic speech tokens feed chunk-aware conditional flow matching for acoustic generation.",
+    stack: "Python · PyTorch · Audio preprocessing · Dataset annotation · Forced alignment · Conditional flow matching · State-space models",
     result: "10M+ speech clips assembled for training",
     ownership:
-      "End-to-end dataset assembly, model development, experiment design, and evaluation across the speech generation pipeline.",
+      "Designed and built the Expressive Speech Dataset Studio, assembled and curated the training corpus, and contributed to architecture research, experiment design, and evaluation across the speech pipeline.",
   },
   {
     number: "02",
@@ -157,6 +157,10 @@ export default function Home() {
                 <h4>My contribution</h4><p>{study.ownership}</p>
                 <h4>Tools & methods</h4><p>{study.stack}</p>
                 <h4>Result</h4><p>{study.result}</p>
+                {project.id === "tts" && <figure className="tts-studio-preview">
+                  <img src="/tts-dataset-studio.png" alt="Expressive Speech Dataset Studio showing waveform-aligned phonemes, vocal events, speech behaviors, and emotion annotations" width={2048} height={1128} loading="lazy" decoding="async" />
+                  <figcaption>Expressive Speech Dataset Studio: a human review workflow for waveform-aligned phonemes, vocal events, speech behaviors, and emotion labels.</figcaption>
+                </figure>}
               </div>
             </details>
             </div>

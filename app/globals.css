@@ -54,6 +54,9 @@ summary:hover { text-decoration: underline; text-underline-offset: 4px; }
 .project-details { margin: 18px 0 8px; padding: 6px 0 6px 22px; border-left: 2px solid var(--line); max-width: 730px; }
 .project-details p { margin-bottom: 18px; }
 .project-details p:last-child { margin-bottom: 0; }
+.tts-studio-preview { margin: 24px 0 0; }
+.tts-studio-preview img { display: block; width: 100%; border: 1px solid var(--line); }
+.tts-studio-preview figcaption { margin-top: 8px; }
 .confidential-note { color: var(--muted); font-size: .875rem; }
 .publication { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 26px; margin-bottom: 30px; }
 .publication:last-child { margin-bottom: 0; }
