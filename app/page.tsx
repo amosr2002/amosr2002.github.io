@@ -166,7 +166,7 @@ export default function Home() {
           <ProjectThumbnail kind="aerial" />
           <div className="work-body">
           <div className="entry-heading"><h3>Aerial image understanding and localization</h3><span className="result">Computer vision</span></div>
-          <p className="confidential-note">Undergraduate capstone · WPI · 2023</p>
+          <p className="confidential-note">Undergraduate capstone · WPI × DEVCOM · 2023</p>
           <p>Developed a computer vision pipeline for GPS-denied aerial localization, using semantic segmentation to identify geographic regions and a neural network to estimate positional changes between aerial images.</p>
           <a className="paper-link" href="https://digital.wpi.edu/concern/student_works/hx11xj644?locale=en" target="_blank" rel="noreferrer">Read project report ↗</a>
                   </div>
