@@ -1,9 +1,8 @@
-type Kind = "tts" | "clinical" | "mtl" | "aerial" | "market" | "sports";
+type Kind = "tts" | "mtl" | "aerial" | "market" | "sports";
 
-function Workflow({ kind }: { kind: "tts" | "clinical" | "market" }) {
+function Workflow({ kind }: { kind: "tts" | "market" }) {
   const labels = {
     tts: ["Text", "Speech model", "Audio"],
-    clinical: ["Documents", "Intake pipeline", "Clinical context"],
     market: ["Market data", "Time-series model", "Forecast"],
   }[kind];
   return <svg viewBox="0 0 360 220" role="img" aria-label={`${labels.join(" to ")}, conceptual workflow`}>

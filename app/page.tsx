@@ -20,15 +20,6 @@ const projects = [
   },
   {
     number: "02",
-    id: "clinical",
-    title: "AI for clinical operations",
-    tag: "HEALTHCARE / SYSTEMS",
-    description:
-      "An AI document-intake pipeline for hospital systems, designed to turn messy inputs into useful context for clinicians and care teams.",
-    result: "300+ patients served",
-  },
-  {
-    number: "03",
     id: "mtl",
     title: "Articulatory feature supervision",
     tag: "RESEARCH / MULTI-TASK LEARNING",
@@ -55,20 +46,6 @@ const caseStudies = [
   },
   {
     number: "02",
-    id: "clinical-case-study",
-    label: "CONFIDENTIAL WORK · KALIBER LABS",
-    title: "Turning clinical documents into useful context.",
-    problem:
-      "Healthcare teams deal with information arriving in inconsistent formats and workflows. The goal was to make document intake more reliable and useful without exposing confidential patient or hospital information.",
-    approach:
-      "I built and productionized a document-intake pipeline that converts incoming materials into structured context for downstream workflows. The system was designed around operational reliability, clear handoffs, and the constraints of real clinical environments.",
-    stack: "Python · LLM context engineering · Document processing · Production ML systems",
-    result: "Pipeline serving 300+ patients and 50+ providers",
-    ownership:
-      "Pipeline architecture, implementation, productionization, and the context structures used to support model and care-team workflows.",
-  },
-  {
-    number: "03",
     id: "mtl-case-study",
     label: "RESEARCH · ARXIV PREPRINT",
     title: "Teaching speech models to listen for articulation.",
@@ -167,7 +144,7 @@ export default function Home() {
         {projects.map((project, index) => {
           const study = caseStudies[index];
           return <article className="work-entry" id={`${project.id}-case-study`} key={project.id}>
-            <ProjectThumbnail kind={project.id as "tts" | "clinical" | "mtl"} />
+            <ProjectThumbnail kind={project.id as "tts" | "mtl"} />
             <div className="work-body">
             <div className="entry-heading"><h3>{project.title}</h3><span className="result">{project.result}</span></div>
             <p>{project.description}</p>
