@@ -127,10 +127,32 @@ footer > p { margin-bottom: 8px; }
 .work-body .entry-heading { flex-direction: column; gap: 3px; }
 .work-body .result { text-align: left; }
 .project-thumbnail { margin: 0; align-self: start; }
-.minimal-thumbnail { padding-top: 3px; }
-.project-marker { display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 68px; padding: 0 0 13px; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
-.project-marker[href]:hover .project-discipline { color: var(--accent); }
+.interactive-thumbnail { padding-top: 1px; }
+.project-marker { display: block; width: 100%; padding: 0 0 11px; border: 0; border-bottom: 1px solid var(--line); background: none; color: inherit; cursor: pointer; text-align: left; }
+.project-marker svg { display: block; width: 100%; height: auto; margin-bottom: 10px; overflow: visible; }
+.project-marker-meta { display: flex; align-items: baseline; gap: 9px; }
 .project-number { font-family: Georgia, serif; font-size: 2rem; line-height: 1; letter-spacing: -.06em; }
-.project-discipline { margin-top: 10px; color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.project-discipline, .animate-label { color: var(--muted); font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.animate-label { margin-left: auto; font-size: .58rem; letter-spacing: .08em; opacity: 0; transition: opacity .18s ease, color .18s ease; }
+.project-marker:hover .animate-label, .project-marker:focus-visible .animate-label { color: var(--accent); opacity: 1; }
+.project-marker:focus-visible { outline: 1px solid var(--accent); outline-offset: 5px; }
+.marker-link { display: inline-block; margin-top: 7px; color: var(--muted); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+.marker-link:hover { color: var(--accent); }
+.thumb-trace, .thumb-axis, .thumb-grid { fill: none; stroke: var(--accent); stroke-linecap: round; stroke-linejoin: round; }
+.thumb-trace { stroke-width: 1.5; stroke-dasharray: 240; stroke-dashoffset: 240; }
+.thumb-axis, .thumb-grid { stroke: var(--line); stroke-width: 1; }
+.thumb-node { fill: var(--accent); opacity: .35; transform-box: fill-box; transform-origin: center; }
+.thumb-radar { fill: none; stroke: var(--accent); stroke-width: 1; opacity: .35; transform-box: fill-box; transform-origin: center; }
+.project-marker:hover .thumb-trace, .project-marker:focus-visible .thumb-trace, .project-marker.is-animated .thumb-trace { animation: draw-trace .8s ease-out forwards; }
+.project-marker:hover .thumb-node, .project-marker:focus-visible .thumb-node, .project-marker.is-animated .thumb-node { animation: pulse-node .65s ease-out forwards; }
+.project-marker:hover .thumb-radar, .project-marker:focus-visible .thumb-radar, .project-marker.is-animated .thumb-radar { animation: radar .8s ease-out forwards; }
+.project-marker:hover .node-two, .project-marker.is-animated .node-two { animation-delay: .12s; }
+.project-marker:hover .node-three, .project-marker.is-animated .node-three { animation-delay: .22s; }
+.project-marker:hover .node-four, .project-marker.is-animated .node-four { animation-delay: .34s; }
+.project-marker:hover .node-five, .project-marker.is-animated .node-five { animation-delay: .46s; }
+@keyframes draw-trace { to { stroke-dashoffset: 0; } }
+@keyframes pulse-node { 45% { opacity: 1; transform: scale(1.75); } to { opacity: .72; transform: scale(1); } }
+@keyframes radar { 50% { opacity: .8; transform: scale(1.8); } to { opacity: .35; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .project-marker:hover .thumb-trace, .project-marker:focus-visible .thumb-trace, .project-marker.is-animated .thumb-trace, .project-marker:hover .thumb-node, .project-marker:focus-visible .thumb-node, .project-marker.is-animated .thumb-node, .project-marker:hover .thumb-radar, .project-marker:focus-visible .thumb-radar, .project-marker.is-animated .thumb-radar { animation: none; stroke-dashoffset: 0; opacity: .72; } }
 @media (max-width: 760px) { .work-entry { grid-template-columns: 170px minmax(0, 1fr); gap: 20px; } }
-@media (max-width: 540px) { .work-entry { grid-template-columns: 1fr; gap: 15px; } .project-thumbnail { width: min(100%, 280px); } .project-marker { min-height: 52px; } }
+@media (max-width: 540px) { .work-entry { grid-template-columns: 1fr; gap: 15px; } .project-thumbnail { width: min(100%, 280px); } .animate-label { opacity: 1; } }
