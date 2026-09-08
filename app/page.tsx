@@ -153,7 +153,7 @@ export default function Home() {
           <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download résumé</a></div>
         </div>
         <aside className="profile" aria-label="Career summary">
-          <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait-no-chain.png" alt="Amos Roche" width={1224} height={1285} decoding="async" /></div></figure>
+          <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait.png" alt="Amos Roche" width={1224} height={1285} decoding="async" /></div></figure>
           <dl className="career-summary">
             <div><dt>Now</dt><dd>Kaliber Labs</dd></div>
             <div><dt>Previously</dt><dd>Walmart · Fidelity</dd></div>
