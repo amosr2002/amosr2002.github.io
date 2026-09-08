@@ -76,7 +76,10 @@ summary:hover { text-decoration: underline; text-underline-offset: 4px; }
 .architecture-arrow { fill: none; stroke: var(--muted); stroke-width: 1.2; marker-end: url(#architecture-arrowhead); }
 .architecture-arrowhead { fill: var(--muted); }
 .architecture-caption { fill: var(--muted); font-family: Arial, sans-serif; font-size: 10px; }
-.architecture-summary { margin: 14px 0 0; color: var(--muted); font-size: .875rem; line-height: 1.65; }
+.architecture-summary { margin: 14px 0 0; color: var(--muted); font-size: .875rem; line-height: 1.7; }
+.architecture-summary p { margin: 0 0 10px; }
+.architecture-summary p:last-child { margin-bottom: 0; }
+.architecture-summary strong { color: var(--ink); }
 .confidential-note { color: var(--muted); font-size: .875rem; }
 .publication { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 26px; margin-bottom: 30px; }
 .publication:last-child { margin-bottom: 0; }

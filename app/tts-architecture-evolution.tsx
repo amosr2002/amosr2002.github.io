@@ -5,9 +5,21 @@ import { useState } from "react";
 type Stage = 0 | 1 | 2;
 
 const stages = [
-  { label: "Frame-level prosody", summary: "FastPitch baseline extended with a Mamba state-space module to model pitch and energy at the frame level for continuous prosody and lower latency." },
-  { label: "Two-stage flow matching", summary: "The design pivoted to separate semantic speech planning from acoustic realization, using chunk-aware conditional flow matching for the acoustic stage." },
-  { label: "Current pipeline design", summary: "The current design adds mixed text and IPA input, speaker selection, style conditioning, and a WER safety check around the two-stage core." },
+  {
+    label: "Frame-level prosody",
+    whatChanged: "The initial direction started with a FastPitch and HiFi-GAN baseline. After the length regulator expands phoneme states to acoustic frames, a Mamba state-space module predicts prosody at that frame level rather than assigning a single pitch and energy value to each phoneme.",
+    why: "That shift aimed to capture micro-prosody such as vibrato, rising endings, pauses, and natural changes in energy while keeping the sequential component lightweight enough for low-latency generation. It improved the treatment of timing and delivery, but speaker identity, style, and acoustic realization still remained tightly coupled.",
+  },
+  {
+    label: "Two-stage flow matching",
+    whatChanged: "The architecture then separated semantic planning from acoustic generation. An autoregressive language model produces semantic speech tokens from text; conditional flow matching turns those tokens into a mel representation; the vocoder renders the waveform.",
+    why: "This division gives the system a clean boundary between what is being said and how it should sound. The flow-matching stage can take speaker and style conditioning without forcing those signals into the semantic plan, and its chunk-aware causal design supports streaming without treating every utterance as one long offline generation job.",
+  },
+  {
+    label: "Current pipeline design",
+    whatChanged: "The current design adds mixed text and IPA input, a speaker registry that selects a LoRA and cached speaker representation, and a style encoder that conditions both the language-model and acoustic paths. After synthesis, a WER safety gate performs an ASR round-trip check before the result is released.",
+    why: "IPA gives a direct path for pronunciation overrides on names, clinical terms, and other difficult words. Explicit speaker and style paths reduce the pressure for one latent stream to carry content, identity, and emotion at once, which helps address speaker drift. The WER gate sits outside the model so intelligibility failures can trigger pass-or-regenerate behavior without changing the core generation architecture.",
+  },
 ];
 
 function Block({ x, y, w, title, detail, tone = "base" }: { x: number; y: number; w: number; title: string; detail?: string; tone?: "base" | "model" | "acoustic" | "addition" }) {
@@ -67,6 +79,6 @@ export default function TtsArchitectureEvolution() {
       {stages.map((item, index) => <button key={item.label} type="button" role="tab" aria-selected={stage === index} className={stage === index ? "is-selected" : ""} onClick={() => setStage(index as Stage)}>{String(index + 1).padStart(2, "0")} {item.label}</button>)}
     </div>
     <div className="architecture-diagram"><Diagram stage={stage} /></div>
-    <p className="architecture-summary">{stages[stage].summary}</p>
+    <div className="architecture-summary"><p><strong>What changed</strong> {stages[stage].whatChanged}</p><p><strong>Why it mattered</strong> {stages[stage].why}</p></div>
   </section>;
 }
