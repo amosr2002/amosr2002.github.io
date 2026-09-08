@@ -200,6 +200,7 @@ export default function Home() {
           <div className="entry-heading"><h3>Stock market forecasting</h3><span className="result">Time-series modeling</span></div>
           <p className="confidential-note">Columbia University capstone with JPMorgan Chase &amp; Co.</p>
           <p>Collaborated on a forecasting system using historical market data, trading volumes, options pricing, and machine learning. Explored traditional market analysis, the Black–Scholes model, deep learning, and Prophet to investigate patterns in stock market data.</p>
+          <a className="paper-link" href="/reports/stock-market-forecasting-final-report.pdf" target="_blank" rel="noreferrer">Read final report (PDF) ↗</a>
                   </div>
         </article>
         <article className="work-entry" id="sports-betting-analytics">

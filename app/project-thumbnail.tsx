@@ -22,6 +22,11 @@ function Workflow({ kind }: { kind: "tts" | "clinical" | "market" }) {
 }
 
 export default function ProjectThumbnail({ kind }: { kind: Kind }) {
+  if (kind === "market") return <figure className="project-thumbnail">
+    <a className="thumbnail-frame paper-thumbnail" href="/reports/stock-market-forecasting-final-report.pdf" target="_blank" rel="noreferrer" aria-label="Read the stock market forecasting final report">
+      <img src="/thumbnails/market-volatility.png" width={1820} height={1092} alt="AAPL stock price and implied volatility over time, from the capstone report" loading="lazy" />
+    </a><figcaption>Price &amp; volatility · Final report</figcaption>
+  </figure>;
   if (kind === "mtl") return <figure className="project-thumbnail">
     <a className="thumbnail-frame paper-thumbnail" href="https://arxiv.org/abs/2608.22273" target="_blank" rel="noreferrer" aria-label="Read the paper containing the hierarchical multi-task model architecture">
       <img src="/thumbnails/articulatory-architecture.png" width={646} height={250} alt="Figure 2: WavLM backbone, articulatory feature heads, cross-attention, and phoneme classifier" loading="lazy" />
