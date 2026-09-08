@@ -112,7 +112,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="#about">About</a><a href="#work">Work</a>
           <a href="#publications">Publications</a><a href="#contact">Contact</a>
-          <a href="/Amos-Roche-Resume.pdf" target="_blank" rel="noreferrer">Résumé</a>
+          <a href="/Amos-Roche-Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           <ThemeToggle />
         </div>
       </nav>
@@ -128,7 +128,7 @@ export default function Home() {
           <h2>About me</h2>
           <p>I&apos;m an ML engineer and researcher developing models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
           <p>My background also spans advertising experimentation, NLP, data engineering, and computer vision for aerial localization. I&apos;m interested in ML problems across domains, and in the work it takes to make a promising model useful.</p>
-          <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download résumé</a></div>
+          <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download Resume</a></div>
         </div>
         <aside className="profile" aria-label="Career summary">
           <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait-selected.png" alt="Amos Roche" width={1222} height={1287} decoding="async" /></div></figure>
