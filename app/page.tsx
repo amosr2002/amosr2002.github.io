@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ThemeToggle from "./theme-toggle";
 import ProjectThumbnail from "./project-thumbnail";
+import TtsArchitectureEvolution from "./tts-architecture-evolution";
 
 export const metadata: Metadata = {
   title: "Amos Roche — ML Engineer and Researcher",
@@ -157,6 +158,7 @@ export default function Home() {
                 <h4>My contribution</h4><p>{study.ownership}</p>
                 <h4>Tools & methods</h4><p>{study.stack}</p>
                 <h4>Result</h4><p>{study.result}</p>
+                {project.id === "tts" && <TtsArchitectureEvolution />}
                 {project.id === "tts" && <figure className="tts-studio-preview">
                   <img src="/tts-dataset-studio.png" alt="Expressive Speech Dataset Studio showing waveform-aligned phonemes, vocal events, speech behaviors, and emotion annotations" width={2048} height={1128} loading="lazy" decoding="async" />
                   <figcaption>Expressive Speech Dataset Studio: a human review workflow for waveform-aligned phonemes, vocal events, speech behaviors, and emotion labels.</figcaption>

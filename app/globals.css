@@ -57,6 +57,26 @@ summary:hover { text-decoration: underline; text-underline-offset: 4px; }
 .tts-studio-preview { margin: 24px 0 0; }
 .tts-studio-preview img { display: block; width: 100%; border: 1px solid var(--line); }
 .tts-studio-preview figcaption { margin-top: 8px; }
+.architecture-evolution { margin: 28px 0 0; padding: 24px 0 2px; border-top: 1px solid var(--line); }
+.architecture-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.architecture-heading span { color: var(--muted); font-size: .72rem; letter-spacing: .1em; }
+.architecture-steps { display: flex; flex-wrap: wrap; gap: 7px 17px; margin: 13px 0 16px; }
+.architecture-steps button { padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; font: inherit; font-size: .72rem; text-align: left; }
+.architecture-steps button:hover, .architecture-steps button.is-selected { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.architecture-steps button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.architecture-diagram { overflow-x: auto; border: 1px solid var(--line); background: color-mix(in srgb, var(--paper) 91%, white); padding: 15px; }
+.architecture-diagram svg { display: block; min-width: 590px; width: 100%; height: auto; }
+.architecture-block rect { stroke-width: 1; }
+.architecture-base rect { fill: var(--paper); stroke: var(--line); }
+.architecture-model rect { fill: color-mix(in srgb, var(--accent) 10%, var(--paper)); stroke: var(--accent); }
+.architecture-acoustic rect { fill: color-mix(in srgb, #3c8e7f 14%, var(--paper)); stroke: #3c8e7f; }
+.architecture-addition rect { fill: color-mix(in srgb, #bd7d1e 13%, var(--paper)); stroke: #bd7d1e; }
+.architecture-title { fill: var(--ink); font-family: Arial, sans-serif; font-size: 9px; font-weight: 700; text-anchor: middle; }
+.architecture-detail { fill: var(--muted); font-family: Arial, sans-serif; font-size: 7px; text-anchor: middle; }
+.architecture-arrow { fill: none; stroke: var(--muted); stroke-width: 1.2; marker-end: url(#architecture-arrowhead); }
+.architecture-arrowhead { fill: var(--muted); }
+.architecture-caption { fill: var(--muted); font-family: Arial, sans-serif; font-size: 10px; }
+.architecture-summary { margin: 14px 0 0; color: var(--muted); font-size: .875rem; line-height: 1.65; }
 .confidential-note { color: var(--muted); font-size: .875rem; }
 .publication { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 26px; margin-bottom: 30px; }
 .publication:last-child { margin-bottom: 0; }
