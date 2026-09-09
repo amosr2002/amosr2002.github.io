@@ -82,6 +82,17 @@ const publications = [
     href: "https://doi.org/10.5220/0010893700003123",
     action: "View publication",
   },
+  {
+    year: "WPI",
+    type: "INDEPENDENT STUDY RESEARCH",
+    label: "Independent Study Research · Worcester Polytechnic Institute",
+    title: "PCA-Assisted LSTM Autoencoders for Anomaly Detection in COVID-19 Symptom Time Series",
+    authors: "Amos Roche and Matthew Finn",
+    summary:
+      "An exploratory study of hourly COVID-19 symptom reports, combining principal component analysis, LSTM sequence reconstruction, and overlapping-window voting to identify unusual reporting patterns.",
+    href: "/reports/covid19-symptom-anomaly-detection-roche-finn.pdf",
+    action: "Read research paper (PDF)",
+  },
 ];
 
 const skills = [
@@ -203,10 +214,11 @@ export default function Home() {
       </section>
 
       <section id="publications" className="section">
-        <div className="section-heading"><h2>Publications</h2><span>2022–2026</span></div>
+        <div className="section-heading"><h2>Publications &amp; research</h2><span>2022–2026</span></div>
         {publications.map((publication) => <article className="publication" key={publication.title}>
           <span className="publication-year">{publication.year}</span>
-          <div><h3><a href={publication.href} target="_blank" rel="noreferrer">{publication.title}</a></h3>
+          <div>{publication.label && <p className="confidential-note">{publication.label}</p>}
+            <h3><a href={publication.href} target="_blank" rel="noreferrer">{publication.title}</a></h3>
             <p className="authors">{publication.authors}</p>
             <p>{publication.summary}</p>
             <a className="paper-link" href={publication.href} target="_blank" rel="noreferrer">{publication.action} ↗</a>
