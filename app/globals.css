@@ -164,6 +164,7 @@ footer > p { margin-bottom: 8px; }
 .marker-link:hover { color: var(--accent); }
 .thumb-trace, .thumb-axis, .thumb-grid, .thumb-book-line, .thumb-candles path { fill: none; stroke: var(--accent); stroke-linecap: round; stroke-linejoin: round; }
 .thumb-trace { stroke-width: 1.5; stroke-dasharray: 240; stroke-dashoffset: 240; }
+.thumb-pipeline { fill: none; stroke: var(--accent); stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
 .thumb-axis, .thumb-grid { stroke: var(--line); stroke-width: 1; }
 .thumb-node { fill: var(--accent); opacity: .35; transform-box: fill-box; transform-origin: center; }
 .thumb-radar { fill: none; stroke: var(--accent); stroke-width: 1; opacity: .35; transform-box: fill-box; transform-origin: center; }
