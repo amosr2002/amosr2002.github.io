@@ -7,10 +7,10 @@ type Kind = "tts" | "mtl" | "aerial" | "market" | "sports" | "anomaly";
 const markers: Record<Kind, { number: string; label: string; href?: string; linkLabel?: string }> = {
   tts: { number: "01", label: "Speech" },
   mtl: { number: "02", label: "Research", href: "https://arxiv.org/abs/2608.22273", linkLabel: "Paper" },
-  aerial: { number: "03", label: "Vision", href: "https://digital.wpi.edu/concern/student_works/hx11xj644?locale=en", linkLabel: "Report" },
-  market: { number: "04", label: "Markets", href: "/reports/stock-market-forecasting-final-report.pdf", linkLabel: "Report" },
+  aerial: { number: "03", label: "Vision" },
+  market: { number: "04", label: "Markets" },
   sports: { number: "05", label: "Independent" },
-  anomaly: { number: "06", label: "Anomaly detection", href: "/reports/covid19-symptom-anomaly-detection-roche-finn.pdf", linkLabel: "Paper" },
+  anomaly: { number: "06", label: "Anomaly detection" },
 };
 
 function Sketch({ kind }: { kind: Kind }) {
