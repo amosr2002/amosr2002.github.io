@@ -76,7 +76,7 @@ const publications = [
     year: "2022",
     type: "CONFERENCE PAPER",
     title: "A Prognostic Machine Learning Framework and Algorithm for Predicting Long-term Behavioural Outcomes in Cancer Survivors",
-    authors: "Amos Markus, Amos Roche, Chia-Kai Ngan, Yat-Tung Cheung, Katerina Prifti",
+    authors: "Anneliese Markus, Amos Roche, Chun-Kit Ngan, Yin-Ting Cheung, Kristi Prifti",
     summary:
       "A prognostic machine learning framework for predicting long-term behavioral outcomes in childhood cancer survivors.",
     href: "https://doi.org/10.5220/0010893700003123",
