@@ -139,7 +139,6 @@ export default function Home() {
           <p>I&apos;m an ML engineer and researcher developing models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
           <p>My background spans statistical analysis, ML research, and LLM and computer-vision pipelines across domains including advertising at Walmart, MLB sports analytics, healthcare, aerial localization for U.S. Army DEVCOM, and finance. I care about turning strong technical work into clear, useful experiences that stakeholders and customers want to adopt.</p>
           <p>Outside work, I play basketball, ski, and travel. I played club basketball at WPI and Columbia and continue to compete in men&apos;s leagues in San Francisco. Based in New Hampshire, I&apos;ve skied throughout the Northeast and the Rockies, and I&apos;m looking forward to exploring Northern California&apos;s slopes. I also enjoy attending Patriots and Celtics games, including Celtics games at TD Garden.</p>
-          <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download Resume</a></div>
         </div>
       </section>
 
@@ -231,9 +230,16 @@ export default function Home() {
 
       <section className="section tools"><h2>Tools & methods</h2><p>{skills.join(" · ")}</p></section>
       <footer id="contact">
-        <h2>Get in touch</h2>
-        <p>For opportunities, research, or a conversation about what you&apos;re building:</p>
-        <a className="email" href="mailto:ar4626@columbia.edu">ar4626@columbia.edu</a>
+        <div className="contact-heading"><span>Contact</span><h2>Get in touch</h2></div>
+        <div className="contact-layout">
+          <p className="contact-message">I&apos;m currently seeking ML engineering and applied-research roles. If my experience could be useful to your team, I&apos;d love to hear from you.</p>
+          <div className="contact-links">
+            <a href="mailto:ar4626@columbia.edu"><span>Email</span><strong>ar4626@columbia.edu</strong><b aria-hidden="true">→</b></a>
+            <a href="https://github.com/amosr2002" target="_blank" rel="noreferrer"><span>GitHub</span><strong>amosr2002</strong><b aria-hidden="true">→</b></a>
+            <a href="https://www.linkedin.com/in/amos-roche" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Amos Roche</strong><b aria-hidden="true">→</b></a>
+            <a href="/Amos-Roche-Resume.pdf" download><span>Résumé</span><strong>Download PDF</strong><b aria-hidden="true">→</b></a>
+          </div>
+        </div>
         <div className="footer-bottom"><span>© 2026 Amos Roche</span><a href="#top">Back to top ↑</a></div>
       </footer>
     </main>
