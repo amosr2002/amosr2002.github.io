@@ -124,7 +124,7 @@ export default function Home() {
           <p className="intro-text">I build and evaluate ML systems, from research prototypes to deployed applications.</p>
         </header>
         <aside className="profile" aria-label="Career summary">
-          <figure className="portrait"><div className="portrait-frame"><img src="/amos-roche-portrait-selected.png" alt="Amos Roche" width={1222} height={1287} decoding="async" /></div></figure>
+          <figure className="portrait"><div className="portrait-frame skiing-portrait"><img src="/amos-roche-skiing.png" alt="Amos Roche skiing" width={512} height={512} decoding="async" /></div></figure>
           <dl className="career-summary">
             <div><dt>Now</dt><dd>Kaliber Labs</dd></div>
             <div><dt>Previously</dt><dd>Walmart · Fidelity</dd></div>
