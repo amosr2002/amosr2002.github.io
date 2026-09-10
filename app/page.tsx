@@ -85,14 +85,12 @@ const publications = [
 ];
 
 const toolkit = [
-  { title: "Languages", items: ["Python", "SQL", "Java", "R", "Scala", "C++"] },
-  { title: "ML frameworks & libraries", items: ["PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "OpenCV"] },
-  { title: "ML techniques", items: ["Transformers", "Multi-task learning", "RAG", "Diffusion models", "State-space models", "Cross-attention", "CNNs"] },
-  { title: "Speech & audio ML", items: ["Text-to-speech", "WavLM", "Phoneme recognition", "CTC", "Conditional flow matching", "Audio preprocessing", "Forced alignment"] },
-  { title: "ML systems", items: ["Edge inference", "Quantization", "GPU training & inference", "CUDA", "Model optimization"] },
-  { title: "Data & cloud", items: ["Pandas", "PySpark", "dbt", "Snowflake", "AWS", "GCP", "BigQuery"] },
-  { title: "Experimentation & statistics", items: ["A/B & A/A testing", "Statistical testing", "Correlation analysis", "Time-series analysis", "Experiment design", "Model evaluation"] },
-  { title: "Computer vision", items: ["Semantic segmentation", "Aerial localization", "Image processing", "Contour & edge detection"] },
+  { title: "Core", items: ["Python", "SQL", "PyTorch", "Hugging Face"] },
+  { title: "Speech AI", items: ["Text-to-speech", "WavLM", "Phoneme recognition", "Conditional flow matching"] },
+  { title: "Model design", items: ["Transformers", "Multi-task learning", "Cross-attention", "State-space models"] },
+  { title: "ML systems", items: ["GPU training & inference", "CUDA", "Quantization", "Model optimization"] },
+  { title: "Data platforms", items: ["Pandas", "PySpark", "Snowflake", "BigQuery"] },
+  { title: "Applied ML", items: ["Experiment design", "Model evaluation", "Time-series analysis", "Semantic segmentation"] },
 ];
 
 export default function Home() {
