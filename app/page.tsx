@@ -137,7 +137,7 @@ export default function Home() {
         <div className="about-copy">
           <h2>About me</h2>
           <p>I&apos;m an ML engineer and researcher developing models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
-          <p>My background also spans advertising experimentation, NLP, data engineering, and computer vision for aerial localization. I care about turning strong technical work into clear, useful experiences that stakeholders and customers want to adopt.</p>
+          <p>My background spans statistical analysis, ML research, and LLM and computer-vision pipelines across domains including MLB sports analytics, healthcare, aerial localization for U.S. Army DEVCOM, and finance. I care about turning strong technical work into clear, useful experiences that stakeholders and customers want to adopt.</p>
           <div className="personal-links"><a href="mailto:ar4626@columbia.edu">Email</a><a href="https://github.com/amosr2002">GitHub</a><a href="https://www.linkedin.com/in/amos-roche">LinkedIn</a><a href="/Amos-Roche-Resume.pdf" download>Download Resume</a></div>
         </div>
       </section>
