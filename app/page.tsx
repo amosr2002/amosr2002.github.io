@@ -88,9 +88,11 @@ const toolkit = [
   { title: "Languages", items: ["Python", "SQL", "Java", "R", "Scala", "C++"] },
   { title: "ML frameworks & libraries", items: ["PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "OpenCV"] },
   { title: "ML techniques", items: ["Transformers", "Multi-task learning", "RAG", "Diffusion models", "State-space models", "Cross-attention", "CNNs"] },
-  { title: "Speech & audio ML", items: ["Text-to-speech", "WavLM", "Phoneme recognition", "CTC", "Conditional flow matching"] },
+  { title: "Speech & audio ML", items: ["Text-to-speech", "WavLM", "Phoneme recognition", "CTC", "Conditional flow matching", "Audio preprocessing", "Forced alignment"] },
   { title: "ML systems", items: ["Edge inference", "Quantization", "GPU training & inference", "CUDA", "Model optimization"] },
-  { title: "Data & cloud", items: ["PySpark", "dbt", "Snowflake", "AWS", "GCP", "BigQuery"] },
+  { title: "Data & cloud", items: ["Pandas", "PySpark", "dbt", "Snowflake", "AWS", "GCP", "BigQuery"] },
+  { title: "Experimentation & statistics", items: ["A/B & A/A testing", "Statistical testing", "Correlation analysis", "Time-series analysis", "Experiment design", "Model evaluation"] },
+  { title: "Computer vision", items: ["Semantic segmentation", "Aerial localization", "Image processing", "Contour & edge detection"] },
 ];
 
 export default function Home() {
