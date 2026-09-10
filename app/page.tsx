@@ -84,23 +84,13 @@ const publications = [
   },
 ];
 
-const skills = [
-  "Python",
-  "PyTorch",
-  "Transformers",
-  "Computer Vision",
-  "Scikit-learn",
-  "SQL",
-  "OpenCV",
-  "TTS",
-  "WavLM",
-  "Flow Matching",
-  "State-Space Models",
-  "RAG",
-  "CUDA",
-  "AWS / GCP",
-  "PySpark",
-  "Snowflake",
+const toolkit = [
+  { title: "Languages", items: ["Python", "SQL", "Java", "R", "Scala", "C++"] },
+  { title: "ML frameworks & libraries", items: ["PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "OpenCV"] },
+  { title: "ML techniques", items: ["Transformers", "Multi-task learning", "RAG", "Diffusion models", "State-space models", "Cross-attention", "CNNs"] },
+  { title: "Speech & audio ML", items: ["Text-to-speech", "WavLM", "Phoneme recognition", "CTC", "Conditional flow matching"] },
+  { title: "ML systems", items: ["Edge inference", "Quantization", "GPU training & inference", "CUDA", "Model optimization"] },
+  { title: "Data & cloud", items: ["PySpark", "dbt", "Snowflake", "AWS", "GCP", "BigQuery"] },
 ];
 
 export default function Home() {
@@ -228,7 +218,17 @@ export default function Home() {
         </article>)}
       </section>
 
-      <section className="section tools"><h2>Tools & methods</h2><p>{skills.join(" · ")}</p></section>
+      <section className="section tools">
+        <div className="section-heading"><h2>Toolkit</h2><span>Tools &amp; methods</span></div>
+        <div className="toolkit-grid">
+          {toolkit.map((group) => (
+            <section className="toolkit-group" key={group.title}>
+              <h3>{group.title}</h3>
+              <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
+            </section>
+          ))}
+        </div>
+      </section>
       <footer id="contact">
         <div className="contact-heading"><h2>Get in touch</h2></div>
         <div className="contact-layout">
