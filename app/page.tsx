@@ -130,7 +130,7 @@ export default function Home() {
           <h2>About me</h2>
           <p>I&apos;m an ML engineer and researcher developing models and production AI pipelines. My recent work includes speech generation, phoneme recognition, and clinical document processing.</p>
           <p>My background spans statistical analysis, ML research, and LLM and computer-vision pipelines across domains including advertising at Walmart, MLB sports analytics, healthcare, aerial localization for U.S. Army DEVCOM, and finance. I care about turning strong technical work into clear, useful experiences that stakeholders and customers want to adopt.</p>
-          <p>Outside work, I play basketball, ski, and travel. I played club basketball at WPI and Columbia and continue to compete in men&apos;s leagues in San Francisco. Based in New Hampshire, I&apos;ve skied throughout the Northeast and the Rockies, and I&apos;m looking forward to exploring Northern California&apos;s slopes. I also enjoy attending Patriots and Celtics games, including Celtics games at TD Garden.</p>
+          <p>Outside work, I play basketball, ski, and travel. I played club basketball at WPI and Columbia and continue to compete in men&apos;s leagues in San Francisco. Based in New Hampshire, I&apos;ve skied throughout the Northeast and the Rockies, and I&apos;m looking forward to exploring Northern California&apos;s slopes. I also enjoy attending Patriots and Celtics games at Gillette Stadium and TD Garden.</p>
         </div>
       </section>
 
