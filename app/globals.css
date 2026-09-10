@@ -94,16 +94,14 @@ summary:hover { text-decoration: underline; text-underline-offset: 4px; }
 .tools h2 { margin-bottom: 16px; }
 .tools p { color: var(--muted); line-height: 2; margin-bottom: 0; max-width: 780px; }
 footer { border-top: 1px solid var(--line); padding: 38px 0 24px; }
-.contact-heading { display: flex; align-items: baseline; gap: 18px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
-.contact-heading > span { color: var(--accent); font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
-.contact-heading h2 { font-size: 1.6rem; }
+.contact-heading { padding-bottom: 20px; }
 .contact-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(330px, .9fr); gap: 72px; padding-top: 38px; }
-.contact-message { max-width: 510px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.55rem, 3.3vw, 2.15rem); line-height: 1.32; letter-spacing: -.025em; }
+.contact-message { max-width: 510px; font-size: 1rem; line-height: 1.8; }
 .contact-links { border-top: 1px solid var(--line); }
 .contact-links a { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; align-items: baseline; gap: 16px; padding: 18px 9px; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; }
 .contact-links a:hover { color: var(--accent); background: color-mix(in srgb, var(--accent) 5%, transparent); text-decoration: none; }
 .contact-links span { color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
-.contact-links strong { font-size: .95rem; font-weight: 500; }
+.contact-links em { font-size: .95rem; font-style: normal; }
 .contact-links b { color: var(--accent); font-size: 1.1rem; font-weight: 400; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .75rem; margin-top: 58px; }
 .footer-bottom a { color: var(--muted); }
@@ -129,8 +127,7 @@ footer { border-top: 1px solid var(--line); padding: 38px 0 24px; }
   .section { padding-bottom: 35px; }
   .intro-text { font-size: 1.125rem; }
   .project-details { padding-left: 15px; }
-  .contact-heading { display: block; padding-bottom: 24px; }
-  .contact-heading > span { display: block; margin-bottom: 5px; }
+  .contact-heading { padding-bottom: 20px; }
   .contact-layout { padding-top: 28px; }
   .contact-links a { grid-template-columns: 1fr auto; gap: 2px 16px; }
   .contact-links span { grid-column: 1 / -1; }

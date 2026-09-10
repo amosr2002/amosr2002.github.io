@@ -230,14 +230,14 @@ export default function Home() {
 
       <section className="section tools"><h2>Tools & methods</h2><p>{skills.join(" · ")}</p></section>
       <footer id="contact">
-        <div className="contact-heading"><span>Contact</span><h2>Get in touch</h2></div>
+        <div className="contact-heading"><h2>Get in touch</h2></div>
         <div className="contact-layout">
           <p className="contact-message">I&apos;m currently seeking ML engineering and applied-research roles. If my experience could be useful to your team, I&apos;d love to hear from you.</p>
           <div className="contact-links">
-            <a href="mailto:ar4626@columbia.edu"><span>Email</span><strong>ar4626@columbia.edu</strong><b aria-hidden="true">→</b></a>
-            <a href="https://github.com/amosr2002" target="_blank" rel="noreferrer"><span>GitHub</span><strong>amosr2002</strong><b aria-hidden="true">→</b></a>
-            <a href="https://www.linkedin.com/in/amos-roche" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>Amos Roche</strong><b aria-hidden="true">→</b></a>
-            <a href="/Amos-Roche-Resume.pdf" download><span>Résumé</span><strong>Download PDF</strong><b aria-hidden="true">→</b></a>
+            <a href="mailto:ar4626@columbia.edu"><span>Email</span><em>ar4626@columbia.edu</em><b aria-hidden="true">→</b></a>
+            <a href="https://github.com/amosr2002" target="_blank" rel="noreferrer"><span>GitHub</span><em>amosr2002</em><b aria-hidden="true">→</b></a>
+            <a href="https://www.linkedin.com/in/amos-roche" target="_blank" rel="noreferrer"><span>LinkedIn</span><em>Amos Roche</em><b aria-hidden="true">→</b></a>
+            <a href="/Amos-Roche-Resume.pdf" download><span>Resume</span><em>Download PDF</em><b aria-hidden="true">→</b></a>
           </div>
         </div>
         <div className="footer-bottom"><span>© 2026 Amos Roche</span><a href="#top">Back to top ↑</a></div>
