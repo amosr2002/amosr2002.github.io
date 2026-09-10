@@ -53,7 +53,7 @@ const caseStudies = [
     problem:
       "Phoneme recognition for non-native speech requires more than a generic acoustic representation. The research question was whether explicit articulatory supervision could help a model learn features that generalize better.",
     approach:
-      "I developed a hierarchical multi-task architecture using WavLM representations and cross-attention. The model learns the primary recognition task alongside articulatory feature objectives, giving it an additional linguistic signal during training.",
+      "Collaborated on a hierarchical multi-task architecture using WavLM representations and cross-attention. The model learns the primary recognition task alongside articulatory feature objectives, giving it an additional linguistic signal during training.",
     stack: "Python · PyTorch · WavLM · Cross-attention · Multi-task learning · Phoneme recognition",
     result: "13.47% phoneme error rate on L2-ARCTIC",
     ownership:
@@ -174,7 +174,7 @@ export default function Home() {
           <ProjectThumbnail kind="aerial" />
           <div className="work-body">
           <div className="entry-heading"><h3>Aerial image understanding and localization</h3><span className="result">Computer vision</span></div>
-          <p className="confidential-note">Undergraduate capstone · WPI × DEVCOM · 2023</p>
+          <p className="confidential-note">Undergraduate capstone · WPI × DEVCOM</p>
           <p>Developed a computer vision pipeline for GPS-denied aerial localization, using semantic segmentation to identify geographic regions and a neural network to estimate positional changes between aerial images.</p>
           <a className="paper-link" href="https://digital.wpi.edu/concern/student_works/hx11xj644?locale=en" target="_blank" rel="noreferrer">Read project report ↗</a>
                   </div>
@@ -207,7 +207,6 @@ export default function Home() {
           <div className="work-body">
             <div className="entry-heading"><h3>Anomaly detection in COVID-19 symptom reports</h3><span className="result">Time-series research</span></div>
             <p className="confidential-note">Independent Study Research · Worcester Polytechnic Institute</p>
-            <p className="authors">Amos Roche and Matthew Finn</p>
             <p>An exploratory study of hourly COVID-19 symptom reports, combining principal component analysis, LSTM sequence reconstruction, and overlapping-window voting to identify unusual reporting patterns.</p>
             <a className="paper-link" href="/reports/covid19-symptom-anomaly-detection-roche-finn.pdf" target="_blank" rel="noreferrer">Read paper (PDF) ↗</a>
           </div>
