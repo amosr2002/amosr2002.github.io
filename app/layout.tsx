@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   title: "Amos Roche — ML Engineer and Researcher",
   description: "ML engineer and researcher working across model development, applied research, and production machine learning systems.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/amos-favicon.svg",
+    shortcut: "/amos-favicon.svg",
   },
 };
 
