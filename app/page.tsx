@@ -193,7 +193,9 @@ export default function Home() {
           <ProjectThumbnail kind="sports" />
           <div className="work-body">
           <div className="entry-heading"><h3>Sports betting analytics</h3><span className="result">Independent project</span></div>
-          <p>Analyzed sportsbook pricing, compared expected value across markets, tracked closing-line value, and applied the Kelly criterion to bankroll allocation. Identified arbitrage and middling opportunities and evaluated risk across different bet types.</p>
+          <p>Used third-party odds-aggregation platforms, including OddsJam and DGF, to compare sportsbook pricing across markets. Applied the Kelly criterion to size singles, parlays, and round robins, while tracking closing-line value.</p>
+          <p>Prioritized middling and arbitrage opportunities as lower-variance positions, accounting for changing lines and sportsbook limits that affect execution and scalability. Also constructed near-neutral positions to qualify for sportsbook promotions.</p>
+          <p>For the longer-term strategy, de-vigged aggregated odds across hundreds of sportsbooks to estimate fair prices, then placed positive-expected-value bets when an individual book offered a meaningfully better line.</p>
           <details className="sports-results">
             <summary>View Pikkit results</summary>
             <figure className="sports-results-image">
