@@ -57,7 +57,7 @@ const caseStudies = [
     stack: "Python · PyTorch · WavLM · Cross-attention · Multi-task learning · Phoneme recognition",
     result: "13.47% phoneme error rate on L2-ARCTIC",
     ownership:
-      "Architecture design, training and evaluation workflow, articulatory supervision strategy, and analysis of model performance.",
+      "Designed the hierarchical head layout and staged WavLM fine-tuning strategy: trained task heads on the pretrained backbone, progressively unfroze backbone layers, and ran ablations on head hierarchy and cross-attention to evaluate each component's contribution.",
   },
 ];
 
