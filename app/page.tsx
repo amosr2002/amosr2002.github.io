@@ -102,7 +102,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="#about">About</a><a href="#work">Work</a>
           <a href="#publications">Publications</a><a href="#contact">Contact</a>
-          <a href="/Amos-Roche-Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="/Amos-Roche-Resume.pdf?v=20260909b" target="_blank" rel="noreferrer">Resume</a>
           <ThemeToggle />
         </div>
       </nav>
@@ -237,7 +237,7 @@ export default function Home() {
             <a href="mailto:ar4626@columbia.edu"><span>Email</span><em>ar4626@columbia.edu</em><b aria-hidden="true">→</b></a>
             <a href="https://github.com/amosr2002" target="_blank" rel="noreferrer"><span>GitHub</span><em>amosr2002</em><b aria-hidden="true">→</b></a>
             <a href="https://www.linkedin.com/in/amos-roche" target="_blank" rel="noreferrer"><span>LinkedIn</span><em>Amos Roche</em><b aria-hidden="true">→</b></a>
-            <a href="/Amos-Roche-Resume.pdf" download><span>Resume</span><em>Download PDF</em><b aria-hidden="true">→</b></a>
+            <a href="/Amos-Roche-Resume.pdf?v=20260909b" download><span>Resume</span><em>Download PDF</em><b aria-hidden="true">→</b></a>
           </div>
         </div>
         <div className="footer-bottom"><span>© 2026 Amos Roche</span><a href="#top">Back to top ↑</a></div>
